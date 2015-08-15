@@ -1,7 +1,7 @@
 package shared
 
 type GatewayStatus struct {
-	EUI               string   `json:"eui,omitempty"`
+	Eui               string   `json:"eui,omitempty"`
 	Time              string   `json:"time,omitempty"`
 	Latitude          *float64 `json:"latitude,omitempty"`
 	Longitude         *float64 `json:"longitude,omitempty"`
@@ -15,6 +15,7 @@ type GatewayStatus struct {
 }
 
 type RxPacket struct {
-	Time string `json:"time,omitempty"`
-	Data string `json:"data,omitempty"`
+	GatewayEui string `json:"gatewayEui,omitempty"`
+	Time       string `json:"time,omitempty"`
+	Data       string `json:"data,omitempty"`
 }
