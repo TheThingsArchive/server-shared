@@ -5,8 +5,8 @@ import (
 )
 
 type GatewayStatus struct {
-	Eui               string    `json:"eui,omitempty"`
-	Time              time.Time `json:"time,omitempty"`
+	Eui               string    `json:"eui"`
+	Time              time.Time `json:"time"`
 	Latitude          *float64  `json:"latitude,omitempty"`
 	Longitude         *float64  `json:"longitude,omitempty"`
 	Altitude          *float64  `json:"altitude,omitempty"`
@@ -19,8 +19,9 @@ type GatewayStatus struct {
 }
 
 type RxPacket struct {
-	GatewayEui string    `json:"gatewayEui,omitempty"`
-	NodeEui    string    `json:"nodeEui,omitempty"`
-	Time       time.Time `json:"time,omitempty"`
+	GatewayEui string    `json:"gatewayEui"`
+	NodeEui    string    `json:"nodeEui"`
+	Time       time.Time `json:"time"`
+	RawData    string    `json:"rawData"`
 	Data       string    `json:"data,omitempty"`
 }
