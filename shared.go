@@ -25,3 +25,8 @@ type RxPacket struct {
 	RawData    string    `json:"rawData"`
 	Data       string    `json:"data,omitempty"`
 }
+
+type ConsumerQueues struct {
+	GatewayStatuses chan *GatewayStatus
+	RxPackets       chan *RxPacket
+}
