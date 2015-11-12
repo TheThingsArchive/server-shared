@@ -10,12 +10,12 @@ type GatewayStatus struct {
 	Latitude          *float64  `json:"latitude,omitempty"`
 	Longitude         *float64  `json:"longitude,omitempty"`
 	Altitude          *float64  `json:"altitude,omitempty"`
-	RxCount           *int      `json:"rxCount,omitempty"`
-	RxOk              *int      `json:"rxOk,omitempty"`
-	RxForwarded       *int      `json:"rxForwarded,omitempty"`
+	RxCount           *uint     `json:"rxCount,omitempty"`
+	RxOk              *uint     `json:"rxOk,omitempty"`
+	RxForwarded       *uint     `json:"rxForwarded,omitempty"`
 	AckRatio          *float64  `json:"ackRatio,omitempty"`
-	DatagramsReceived *int      `json:"datagramsReceived,omitempty"`
-	DatagramsSent     *int      `json:"datagramsSent,omitempty"`
+	DatagramsReceived *uint     `json:"datagramsReceived,omitempty"`
+	DatagramsSent     *uint     `json:"datagramsSent,omitempty"`
 }
 
 type RxPacket struct {
