@@ -22,6 +22,10 @@ type RxPacket struct {
 	GatewayEui string    `json:"gatewayEui"`
 	NodeEui    string    `json:"nodeEui"`
 	Time       time.Time `json:"time"`
+	Frequency  *float64  `json:"frequency"`
+	DataRate   string    `json:"dataRate"`
+	Rssi       *int      `json:"rssi"`
+	Snr        *float64  `json:"snr"`
 	RawData    string    `json:"rawData"`
 	Data       string    `json:"data,omitempty"`
 }
